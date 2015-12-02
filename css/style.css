@@ -18,6 +18,7 @@ body {
     font-size: 2em;
     font-weight: 600;
     line-height: .7em;
+    margin: 0 auto;
 }
 
 #content {
@@ -94,9 +95,40 @@ body {
 }
 
 #bankcard-head h1 {
-    font-size: 1.4em;
+    font-size: 1.9em;
     font-weight: 600;
     line-height: 0.7em;
+    margin: 0 auto;
+}
+
+#bankcard-head #back-salary,
+#bankcard-head #complete {
+    margin: 0 5px 0 5px;
+    text-align: center;
+}
+
+#bankcard-head #back-salary a,
+#bankcard-head #complete a {
+    text-decoration: none;
+}
+
+#bankcard-head #back-salary span,
+#bankcard-head #complete span {
+    /*font-size: 15px;*/
+    font-size: 1.7em;
+    text-align: center;
+    line-height: 36px;
+
+    /*Ó°ÏìformµÄ¾ÓÖÐ*/
+    /*line-height: 2.5em;*/
+    color: #669dd1;
+    font-weight: normal;
+}
+
+#bankcard-head #back-salary span {
+    /*font-size: 30px;*/
+    font-size: 2.6em;
+    line-height: 1.5em;
 }
 
 #card-content {
@@ -108,13 +140,17 @@ body {
     color: #A9ACAE;
     text-align: center;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.4em;
+    margin-top: 10px;
 }
 
 #card-content #form {
     background-color: #ffffff;
     color: #858585;
-    font-size: 1.2em;
+    font-size: 1.6em;
+
+    /*Test*/
+    /*border: 1px solid black;*/
 }
 
 .fl {
@@ -130,6 +166,7 @@ body {
     position: relative;
     width: 100%;
     /*border: 1px solid black;*/
+    border-bottom: 1px solid #bebebe;
     margin: 0 5px 5px 5px;
     min-height: 1.8em;
 }
@@ -138,12 +175,14 @@ body {
     display: inline-block;
 }
 
-.item span{
+.item span {
     color: #cbcbcb;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    margin-top: .3em;
+    margin-right: 2em;
 }
 
-.item div:nth-child(1){
+.item div:nth-child(1) {
     /*width: 10%;*/
 }
 
@@ -163,30 +202,9 @@ body {
     width: 250px;
 }
 
-
-
-#bankcard-head #back-salary,
-#bankcard-head #complete {
-    margin: 0 5px 0 5px;
-    text-align: center;
+#form a {
+    margin-top: 1em;
+    margin-right: 1.5em;
+    text-decoration: underline
 }
-
-#bankcard-head #back-salary a,
-#bankcard-head #complete a {
-    text-decoration: none;
-}
-
-#bankcard-head #back-salary span,
-#bankcard-head #complete span {
-    font-size: 15px;
-    text-align: center;
-    line-height: 36px;
-    color: dodgerblue;
-    font-weight: normal;
-}
-
-#bankcard-head #back-salary span {
-    font-size: 30px;
-}
-
 
