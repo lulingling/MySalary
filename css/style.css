@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+/*page one*/
+#salary-head {
+    background-color: white;
+    height: 40px;
+}
+
+#salary-head img {
+    height: 35px;
+    margin: 2px 5px 0 5px;
+}
+
+#salary-head h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: .5em;
+}
+
+#content {
+    padding: 0;
+    margin: 0;
+}
+
+.ui-grid-a div:nth-child(1) {
+    background-color: #2090e7;
+    color: #C2EEfE;
+    border-bottom: 1px solid #7fe5ff;
+}
+
+.ui-grid-a div:nth-child(2) {
+    background-color: #07BDFA;
+    color: #ffffff;
+    border-right: 1px solid #7fe5ff;;
+    /*-webkit-border-image: url("../img/line.png") 1 100 1 100 stretch stretch;*/
+    /*-moz-border-image: url("../img/line.png") 1 100 1 100 stretch stretch;*/
+    /*-o-border-image: url("../img/line.png") 1 100 1 100 stretch stretch;*/
+    /*border-image: url("../img/line.png") 1 100 1 100 stretch stretch;*/
+}
+
+.ui-grid-a div:nth-child(3) {
+    background-color: #07BDFA;
+    color: #CDF2Ff;
+}
+
+#total {
+    width: auto;
+    height: 130px;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 130px;
+    background: url("../img/total-bg.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#yesterday-income, #delay-income {
+    width: 50%;
+    height: 100px;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 30px;
+    background: -moz-linear-gradient(top, #12AAF3, #00CBFf);
+    background: -o-linear-gradient(top, #12AAF3, #00CBFf);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#12AAF3), to(#00CBFf));
+}
+
+#content a {
+    border: none;
+    border-bottom: 1px solid #d0d0d0;
+    text-align: left;
+    font-size: 1.5em;
+    text-indent: 1em;
+    font-weight: 600;
+}
+
+/*page two*/
+#pagetwo {
+    background-color: #EBEEF0;
+}
+
+#pagetwo #bankcard-head {
+    background-color: white;
+    border-bottom-color: #b6b6b7;
+    height: 40px;
+}
+
+#bankcard-head h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 0.7em;
+}
+
+#card-content {
+    padding: 0;
+    margin: 0;
+}
+
+#card-content p {
+    color: #A9ACAE;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#card-content #form {
+    background-color: #ffffff;
+    color: #858585;
+    font-size: 1.2em;
+}
+
+.fl {
+    clear: both;
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    /*border: 1px solid black;*/
+    margin: 0 5px 5px 5px;
+    min-height: 1.8em;
+}
+
+.item div {
+    display: inline-block;
+}
+
+.item span{
+    color: #cbcbcb;
+    font-size: 1.2em;
+}
+
+.item div:nth-child(1){
+    /*width: 10%;*/
+}
+
+.ui-input-text.ui-custom {
+    /*border: 1px solid red;*/
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    /*width: 80%;*/
+    width: 250px;
+    /*width: 220px;在Iphone上显示在一行*/
+}
+
+.sub-item {
+    /*width: 70%;*/
+    width: 250px;
+}
+
+
+
+#bankcard-head #back-salary,
+#bankcard-head #complete {
+    margin: 0 5px 0 5px;
+    text-align: center;
+}
+
+#bankcard-head #back-salary a,
+#bankcard-head #complete a {
+    text-decoration: none;
+}
+
+#bankcard-head #back-salary span,
+#bankcard-head #complete span {
+    font-size: 15px;
+    text-align: center;
+    line-height: 36px;
+    color: dodgerblue;
+    font-weight: normal;
+}
+
+#bankcard-head #back-salary span {
+    font-size: 30px;
+}
+
+

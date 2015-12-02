@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+</head>
+<style>
+    .ui-input-text.ui-custom {
+        border: 1px solid red;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 80%;
+        /*width: 250px;*/
+        /*width: 220px;在Iphone上显示在一行*/
+    }
+
+    .ui-icon-myicon:after {
+        background-image: url("img/back.png");
+        -webkit-background-size: 58px 58px;
+        background-size: 58px 58px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .ui-icon-info-page {
+        background: url("img/help.png") 50% 50% no-repeat;
+        background-size: 58px 58px;
+        width: 36px;
+        height: 36px;
+        margin-top: -18px !important;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    #salary-head #back,
+    #salary-head #info {
+        margin: 0 5px 0 5px;
+        width: 35px;
+        height: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        background-color: dimgray;
+        text-align: center;
+    }
+
+    #salary-head #back a,
+    #salary-head #info a {
+        text-decoration: none;
+    }
+
+    #salary-head #back span,
+    #salary-head #info span {
+        color: #ffffff;
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: normal;
+    }
+
+    #bankcard-head #back-salary,
+    #bankcard-head #complete {
+        margin: 0 5px 0 5px;
+        text-align: center;
+    }
+
+    #bankcard-head #back-salary a,
+    #bankcard-head #complete a {
+        text-decoration: none;
+    }
+
+    #bankcard-head #back-salary span,
+    #bankcard-head #complete span {
+        font-size: 15px;
+        text-align: center;
+        line-height: 30px;
+        color: dodgerblue;
+        font-weight: normal;
+    }
+
+    #bankcard-head #back-salary span {
+        font-size: 30px;
+    }
+</style>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" id="salary-head" style="height: 40px;">
+        <!--<a href="#" class="ui-btn ui-btn-icon-left ui-icon-myicon"></a>-->
+        <img src="img/back.png" class="fl" style="height: 35px;">
+        <!--<div id="back" class="fl">-->
+        <!--<a href="#"><span><</span></a>-->
+        <!--</div>-->
+        <!--<div id="info" class="fr">-->
+        <!--<a href="#"><span>?</span></a>-->
+        <!--</div>-->
+        <img src="img/help.png" class="fr" style="height: 35px">
+
+        <h1>我的收入</h1>
+
+        <!--<a href="#" data-icon="info-page" class="ui-btn  ui-btn-icon-right"></a>-->
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+        <div class="ui-grid-a">
+            <div class="ui-block-solo" id="total">
+                <p>累计收入：<strong>8000</strong> 元</p>
+            </div>
+
+            <div class="ui-block-a" id="yesterday-income">
+                <p><span>300</span>元<br/>
+
+                    昨日收入</p>
+            </div>
+
+            <div class="ui-block-b" id="delay-income">
+                <p><span>1500</span>元<br/>
+
+                    待发放 (元)</p>
+            </div>
+        </div>
+
+        <a href="#pagetwo" data-transition="pop" class="ui-btn">我的银行卡</a>
+        <a href="#" data-transition="pop" class="ui-btn">我的流水账</a>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header" id="bankcard-head">
+        <div id="back-salary" class="fl">
+            <a href="#pageone"><span><</span></a>
+        </div>
+        <div id="complete" class="fr">
+            <a href="#"><span>完成</span></a>
+        </div>
+        <h1>银行卡管理</h1>
+    </div>
+
+    <div data-role="main" class="ui-content" id="card-content">
+        <p>请务必认真填写以下信息，以免影响薪资发放</p>
+
+        <div id="form">
+            <form method="post" action="#">
+                <!--"页面宽度大于 480px 时，它会自动将 label 与表单控件放置于同一行。当小于 480px 时，label 会被放置于表单元素之上。-->
+                <!--<div class="ui-field-contain">-->
+                <fieldset>
+                    <div class="item">
+                        <div>姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="sub-item">
+                            <input id="name" name="name" type="text" data-wrapper-class="ui-custom">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>卡号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="sub-item">
+                            <input id="card-number" name="card-number" type="text" placeholder="请输入卡号"
+                                   data-wrapper-class="ui-custom">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>开户行&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="sub-item">
+                            <input type="text" readonly="readonly" placeholder="China Bank"
+                                   data-wrapper-class="ui-custom">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>所在城市</div>
+                        <div class="sub-item">
+                            <input type="text" readonly="readonly" placeholder="ShangHai"
+                                   data-wrapper-class="ui-custom">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>支行信息</div>
+                        <div class="sub-item">
+                            <input id="sub-branch" name="sub-branch" placeholder="例如：招商银行杭州城西支行"
+                                   data-wrapper-class="ui-custom">
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+            <a href="#" class="fr" style="margin-right: 1.5em; text-decoration: underline">查询支行信息</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
